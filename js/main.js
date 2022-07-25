@@ -20,13 +20,17 @@ var app = new Vue({
                         'text': 'casa',
                         'done': false
                     }
-                ]
-        
+                ],
+
+        newList:    {
+                        'text': this.input,
+                        'done': false
+                    }
     },
     methods: {
         //aggiungi alle cose da fare
         inputText(){
-            this.lista.push(this.input);
+            this.lista.push(this.newList);
         },
 
         //rimuovi dalle cose da fare
