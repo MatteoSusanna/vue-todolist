@@ -12,10 +12,9 @@
 
         <div id="app">
             <div class="container">
-
+            <h1>LISTA COSE DA FARE</h1>
             <input type="text" v-model="input" @keyup.enter="inputText" >
             <button @click="inputText">Inserisci</button>
-
             <ul>
                 <li v-for="(element, indice) in lista">
                     <span @click="strike(indice)" :class="(element.done == true)?'strike':'' " >{{element.text}}</span>
