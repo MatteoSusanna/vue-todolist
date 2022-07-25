@@ -8,12 +8,17 @@ var app = new Vue({
     methods: {
         //aggiungi alle cose da fare
         inputText(){
-            let newObject =     {
-                                    'text': this.input,
-                                    'done': false
-                                }
-            this.lista.push(newObject);
-            this.input= ''
+            if(this.input == ''){
+                alert('Devi scrivere qualcosa per aggiungere alla lista')
+            }else{
+                let newObject =     {
+                    'text': this.input,
+                    'done': false
+                }
+                this.lista.push(newObject);
+                this.input= ''
+
+            }
         },
 
         //rimuovi dalle cose da fare
