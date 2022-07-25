@@ -6,11 +6,13 @@ var app = new Vue({
         lista:  [],    
     },
     methods: {
-        //aggiungi alle cose da fare
+        //aggiungi alle cose da fare;
         inputText(){
+            //controllo degli spazi in caso alert se non viene scritto niente;
             if(this.input.trim() == ''){
                 alert('Devi scrivere qualcosa per aggiungere alla lista')
             }else{
+                //altrimenti esegui la push dell'oggetto nell'array Lista[];
                 let newObject =     {
                     'text': this.input.trim(),
                     'done': false
@@ -33,6 +35,10 @@ var app = new Vue({
             }else{
                 this.lista[indice].done = false;
             }
+        },
+
+        cancellaTutto(){
+            this.lista = [];
         }
     }
 })

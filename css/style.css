@@ -60,6 +60,18 @@ i:hover{
     color: #0f0e17 ;
 }
 
+.textAlternativo{
+    color: green;
+    font-weight: bold;
+}
+
+
+
+
 .strike{
     text-decoration: line-through;
+}
+
+.d-none{
+    display: none;
 }
