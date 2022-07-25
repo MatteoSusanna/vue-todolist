@@ -2,41 +2,33 @@ var app = new Vue({
     el: '#app',
 
     data: {
-        input: '' ,
-        lista:  [
-                    {
-                        'text': 'fare',
-                        'done': false
-                    },
-                    {
-                        'text': 'ciao',
-                        'done': false
-                    },
-                    {
-                        'text': 'casa',
-                        'done': false
-                    },
-                    {        
-                        'text': 'casa',
-                        'done': false
-                    },
-                ],
-
-        pushList:   {
-                        'text': this.input,
-                        'done': false
-                    },
+        input: '',
+        lista:  [],    
     },
     methods: {
         //aggiungi alle cose da fare
         inputText(){
-            this.lista.push(this.pushList);
+            let newObject =     {
+                                    'text': this.input,
+                                    'done': false
+                                }
+            this.lista.push(newObject);
+            this.input= ''
         },
 
         //rimuovi dalle cose da fare
         remove(indice){
             this.lista.splice(indice, 1);
+        },
+
+
+        //sbarra elemento
+        strike(indice){
+            if(this.lista[indice].done == false){
+                this.lista[indice].done = true; 
+            }else{
+                this.lista[indice].done = false;
+            }
         }
     }
-    
 })
