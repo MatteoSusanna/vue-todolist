@@ -24,8 +24,14 @@ var app = new Vue({
         
     },
     methods: {
+        //aggiungi alle cose da fare
         inputText(){
             this.lista.push(this.input);
+        },
+
+        //rimuovi dalle cose da fare
+        remove(indice){
+            this.lista.splice(indice, 1);
         }
     }
     
