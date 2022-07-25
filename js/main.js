@@ -8,16 +8,15 @@ var app = new Vue({
     methods: {
         //aggiungi alle cose da fare
         inputText(){
-            if(this.input == ''){
+            if(this.input.trim() == ''){
                 alert('Devi scrivere qualcosa per aggiungere alla lista')
             }else{
                 let newObject =     {
-                    'text': this.input,
+                    'text': this.input.trim(),
                     'done': false
                 }
                 this.lista.push(newObject);
                 this.input= ''
-
             }
         },
 
